@@ -18,7 +18,6 @@ main.innerHTML = items.map(function(item, index){
 }).join('')
 
 //can use reduce to add all the amount prices together
-
 function add(index){
     purchased.push(items[index])
     localStorage.setItem("purchased",JSON.stringify(purchased))
@@ -30,11 +29,13 @@ main.addEventListener('click', function(){
     }
 })
 
-
 // search bar
 
 let a = items.filter(item => {
     return item.name == 'Air' 
+})
+let b = items.filter(item =>{
+    return item.quanity += `${this.quanity} `
 })
 
 // adding extra code for github
